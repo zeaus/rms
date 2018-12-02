@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Manage_Tables"
+    android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/list1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="8"/>
+
+    <LinearLayout
+        android:layout_weight="2"
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/list1"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/list1">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="34dp"
+            android:layout_marginBottom="5dp"
+            android:clickable="false"
+            android:text="Table 1"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/table1"
+            android:layout_width="600px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="34dp"
+            android:layout_marginBottom="5dp"
+            android:background="@android:color/darker_gray"/>
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="34dp"
+            android:clickable="false"
+            android:text="Table 2"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/table2"
+            android:layout_width="600px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="34dp"
+            android:background="@android:color/darker_gray"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear1"
+            android:inputType="number"
+            android:onClick="Mergetables"
+            android:text="Merge Table"/>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button1"
+            android:inputType="number"
+            android:onClick="ShowMerged"
+            android:text="Show Merged Table"/>
+
+    </LinearLayout>
+
+</LinearLayout>
